@@ -1,4 +1,4 @@
-import React, {useRef , useState} from 'react'
+import React, {useEffect, useRef , useState} from 'react'
 import {
 Modal,
 ModalOverlay,
@@ -63,6 +63,11 @@ const Weathermodal: React.FC  <containerProps>= ({isOpen , onClose , onOpen ,wea
         )
 
      })
+     
+
+     useEffect(() => {
+          setTabtitle("Weather");
+     } , [])
 
   return (
      <Modal isOpen={isOpen} onClose={onClose} size={'3xl'}>
