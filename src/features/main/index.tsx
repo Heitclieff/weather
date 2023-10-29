@@ -1,13 +1,20 @@
-import React from 'react'
-import {Box , VStack , HStack} from '@chakra-ui/react';
+"use client";
+// pages/index.tsx
+import React from "react";
+import HeroSection from "@/components/widget/HeroSection";
+import BoardDetail from "@/components/widget/BoardDetail";
+import Footer from "@/components/widget/footer";
+import Navbar from "@/components/navigation/Navbar";
 
-interface featuresProps {
-} 
-const Main : React.FC <featuresProps> = () => {
+const Main: React.FC = () => {
   return (
-    <Box>Landing Pages</Box>
-  )
-}
-
+    <div>
+      <Navbar />
+      <HeroSection />
+      <BoardDetail />
+      <Footer />
+    </div>
+  );
+};
 
 export default Main;
