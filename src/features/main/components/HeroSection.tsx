@@ -9,11 +9,24 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 
-export default function HeroSection() {
+interface pageProps { 
+
+}
+
+const HeroSection : React.FC <pageProps> = () => {
+  const router = useRouter();
+
   return (
     <Stack direction={{ base: "column", md: "row" }}>
-      <Flex p={10} pt={40} flex={1} align={"flex-start"} justify={"center"}>
+      <Flex 
+      p={10} 
+      pt={40} 
+      flex={1} 
+      align={"flex-start"} 
+      justify={"center"}
+      >
         <Stack spacing={6} w={"full"} maxW={"lg"}>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
             <Text
@@ -39,6 +52,7 @@ export default function HeroSection() {
           </Text>
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Button
+              onClick={() => router.push('/maps')}
               rounded={"full"}
               colorScheme="teal"
               color={"white"}
@@ -63,3 +77,5 @@ export default function HeroSection() {
     </Stack>
   );
 }
+
+export default HeroSection;
