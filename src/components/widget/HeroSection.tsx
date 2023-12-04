@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Button,
   Flex,
@@ -12,7 +11,7 @@ import {
 
 export default function HeroSection() {
   return (
-    <Stack direction={{ base: "column", md: "row" }}>
+    <Stack direction={{ base: "column", md: "row" }} paddingBottom={100}>
       <Flex p={10} pt={40} flex={1} align={"flex-start"} justify={"center"}>
         <Stack spacing={6} w={"full"} maxW={"lg"}>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
@@ -26,7 +25,7 @@ export default function HeroSection() {
                 position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: "blue.400",
+                bg: "teal.400",
                 zIndex: -1,
               }}
             >

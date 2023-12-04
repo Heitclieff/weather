@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Box,
   chakra,
@@ -98,6 +97,7 @@ export default function Footer() {
         borderTopWidth={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.700")}
+        mt="auto"
       >
         <Container
           as={Stack}
