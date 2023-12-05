@@ -26,6 +26,8 @@ TabPanel,
 useTabsContext,
 } from '@chakra-ui/react'
 
+import axios from 'axios';
+
 import { useMultiStyleConfig } from '@chakra-ui/react'
 import { SunIcon } from '@chakra-ui/icons'
 import { weatherTable } from '../assets/table'
@@ -35,42 +37,46 @@ import {BiWorld} from 'react-icons/bi'
 import Weather from '../pages/weather'
 import Plant from '../pages/plant'
 import Visualize from '../pages/visualize'
+
+
+
 interface containerProps {
      isOpen :any
      onOpen : any,
      onClose : any
-     weather : any
+     vector : any
+     currentNodes : any
+     currentTemp : any 
+     currentWeather : any
+     currentDate :string
 }
 
-const Weathermodal: React.FC  <containerProps>= ({isOpen , onClose , onOpen ,weather}) => {
+const Weathermodal: React.FC  <containerProps>= ({isOpen , onClose , onOpen ,currentNodes , vector , currentTemp , currentWeather , currentDate }) => {
 
      const [Tabtitle ,setTabtitle] = useState<string>('Weather');
 
+
      const CustomTab = React.forwardRef((props, ref) => {
+          const tabProps = useTab({ ...props, ref })
+          const isSelected = !!tabProps['aria-selected']
 
-     const tabProps = useTab({ ...props, ref })
-     const isSelected = !!tabProps['aria-selected']
-
-     const styles = useMultiStyleConfig('Tabs', tabProps)
-
-     return (
-          <Button __css={styles.tab} {...tabProps} bg = {isSelected ? 'gray.300' : ''} rounded={'md'}>
-            <Box as='span'>
-              
-            </Box>
-            {tabProps.children}
-          </Button>
-        )
+          const styles = useMultiStyleConfig('Tabs', tabProps)
+          return (
+               <Button __css={styles.tab} {...tabProps} bg={isSelected ? 'gray.300' : ''} rounded={'md'}>
+                    <Box as='span'>
+                    </Box>
+                    {tabProps.children}
+               </Button>
+          )
 
      })
      
-
      useEffect(() => {
           setTabtitle("Weather");
      } , [])
 
   return (
-     <Modal isOpen={isOpen} onClose={onClose} size={'3xl'}>
+     <Modal isOpen={isOpen} onClose={onClose} size={'3xl'} >
      <ModalOverlay />
      <Tabs variant={'unstyled'}>
      <ModalContent bg = 'transparent' boxShadow={0} gap = {3}>
@@ -102,16 +108,27 @@ const Weathermodal: React.FC  <containerProps>= ({isOpen , onClose , onOpen ,wea
          
        <TabPanels >
                <TabPanel p = {1}>
-                    <Weather weather={weather}/>
+                    {currentNodes?.city &&
+                         <Weather 
+                         city ={currentNodes?.city}
+                         currentTemp = {currentTemp}
+                         currentWeather = {currentWeather}
+                         vector = {vector}
+                         />
+                    }
                </TabPanel>
                <TabPanel>
-                    <Plant/>
+                    {currentNodes &&
+                         <Plant 
+                         vector={vector}
+                         currentNodes = {currentNodes}
+                         />
+                    }
                </TabPanel>
                <TabPanel>
-                    <Visualize/>
+                    <Visualize vector = {vector} currentDate = {currentDate}/>
                </TabPanel>
           </TabPanels>
-         
        </ModalBody>
        <ModalFooter>
        </ModalFooter>
