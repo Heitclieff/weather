@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Box,
   Flex,
@@ -30,7 +29,7 @@ export default function Navbar() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
+        bg={useColorModeValue("gray.1000", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
@@ -58,7 +57,8 @@ export default function Navbar() {
           <Text
             textAlign={useBreakpointValue({ base: "right", md: "left" })}
             fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
+            color={useColorModeValue("teal.500", "white")}
+            fontWeight="bold"
           >
             CS319-Project
           </Text>
@@ -77,7 +77,7 @@ export default function Navbar() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
+  const linkColor = useColorModeValue("teal.500", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
@@ -242,11 +242,13 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
+    href: "/",
   },
   {
     label: "Dashboard",
   },
   {
     label: "Contact",
+    href: "/contact",
   },
 ];
