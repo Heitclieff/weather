@@ -14,19 +14,13 @@ import {
 
 import { ReactElement } from "react";
 
-interface FeatureProps {
-  text: string;
-  iconBg: string;
-  icon?: ReactElement;
-}
-
 export default function BoardDetail() {
   return (
     <Container maxW={"7xl"} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={7}>
           <Heading>เลือกข้อมูลที่คุณต้องการรู้</Heading>
-          <Text color={"gray.500"} fontSize={"lg"}>
+          <Stack color={"gray.500"} fontSize={"lg"}>
             <ol>
               <li>
                 แสดงข้อมูลประจำจังหวัดที่เลือก ประกอบไปด้วย สภาพอากาศประจำวัน
@@ -35,7 +29,7 @@ export default function BoardDetail() {
               <li>การพยากรณ์อากาศ</li>
               <li>พืชที่แนะนำ ระยะเวลาการเติบโต</li>
             </ol>
-          </Text>
+          </Stack>
           <Stack
             spacing={4}
             divider={
