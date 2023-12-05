@@ -1,6 +1,6 @@
 export const Plantdata = [
      {
-          region : 'north',
+          region : 'Northen',
           plant : [
                {
                name : "Rice",
@@ -21,7 +21,7 @@ export const Plantdata = [
           ]
      },
      {
-          region : 'south',
+          region : 'Southern',
           plant : [
                {name : "Coffee Beans",
                detail : "",
@@ -38,24 +38,7 @@ export const Plantdata = [
           ]
      },
      {
-          region : 'east',
-          plant : [
-               {name : "Rice",
-               detail : "",
-               image : "https://eos.com/wp-content/uploads/2023/04/rice-field.jpg" ,
-               },
-               {name : "Corn",
-               detail : "",
-               image : "https://cdn.britannica.com/36/167236-050-BF90337E/Ears-corn.jpg" ,
-               },
-               {name : "Sugar Cane",
-               detail : "",
-               image : "https://www.bhg.com/thmb/dGVkgUEAOrdxCWcM9x79Tbp95kA=/4000x0/filters:no_upscale():strip_icc()/How-to-Plant-and-Grow-Sugar-Cane-965303384-2fdac181359d44c185dfa7988fc181a8.jpg" ,
-               },
-          ]
-     },
-     {
-          region : 'west',
+          region : 'Central',
           plant : [
                {name : "Sugar Cane",
                detail : "",
@@ -65,14 +48,14 @@ export const Plantdata = [
                detail : "",
                image : "https://www.bhg.com/thmb/iXhe_h7dGneRCj8c1PWUGFrpMDo=/1866x0/filters:no_upscale():strip_icc()/pineapple-growing-in-field-7b9f5063eaf94e179380f69e09a5c357.jpg" ,
                },
-               {name : "Cassava",
+               {name : "Rice",
                detail : "",
-               image : "https://cdn.jwplayer.com/v2/media/RwsPGYLZ/poster.jpg?width=720" ,
+               image : "https://eos.com/wp-content/uploads/2023/04/rice-field.jpg" ,
                },
           ]
      },
      {
-          region : 'northeast',
+          region : 'North East',
           plant : [
                {name : "Rice",
                detail : "",

@@ -1,18 +1,18 @@
 // pages/index.tsx
 import React from "react";
-import HeroSection from "@/components/widget/HeroSection";
-import BoardDetail from "@/components/widget/BoardDetail";
+import HeroSection from "./components/HeroSection";
+import BoardDetail from "./components/BoardDetail";
 import Footer from "@/components/widget/Footer";
 import Navbar from "@/components/navigation/Navbar";
 
 const Main: React.FC = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <HeroSection />
       <BoardDetail />
       <Footer />
-    </div>
+    </>
   );
 };
 
