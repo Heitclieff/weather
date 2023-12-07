@@ -55,6 +55,8 @@ const StudentCard: React.FC<{
             src={picture}
             alt={`Image of ${person}`}
             objectFit="contain"
+            height="350px"
+            width="600px"
           />
         </Box>
       </Box>
@@ -101,10 +103,7 @@ const ArticleList = () => {
           "กิตติธัช พูลประเสริฐ 1630705216 เลขที่ 15",
           "อภิราช วรภัณฑ์พิศิษฎ์ 1630706560 เลขที่ 16",
         ]}
-        picture={[
-          "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80",
-          "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80",
-        ]}
+        picture={["Ice.jpg", "tian.jpg"]}
       />
 
       <Section
@@ -112,10 +111,7 @@ const ArticleList = () => {
           "กฤติเดช ดวงผาสุขโรจ 1630708467 เลขที่ 20",
           "โทบิ้น แฟรงค์คลิน 1630707774 เลขที่ 22",
         ]}
-        picture={[
-          "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80",
-          "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80",
-        ]}
+        picture={["Boom.jpg", "tobin.png"]}
       />
     </Box>
   );
